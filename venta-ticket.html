@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body>
+    <div id="container">
+    
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg bg-light" style="background-color: rgb(58, 58, 58) !important; padding-left: 0%; padding-right: 0%;">
+            <div class="container-fluid">
+              
+              <a class="navbar-brand text-light">
+                <img src="img/codoacodo.png" style="padding-left: 50px; height:80px;">
+                Conf Bs As</a>
+    
+              <div class="collapse navbar-collapse justify-content-end" style="padding-inline-end: 60px;">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active text-light">La Conferencia</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-secondary">Los oradores</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-secondary">El Lugar y la Fecha</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled text-secondary">Conviértete en Orador</a>
+                  </li>
+                </ul>
+
+                <a class="btn btn-success" id="btn">Comprar tickets</a>
+
+                </form>
+              </div>
+            </div>
+          </nav>
+          <!--Cards-->
+          
+          <div class="row row-cols-1 row-cols-md-3 g-4 text-center"style="width: 70%; height:70%; margin:auto auto; padding: 40px 0 0;">
+                  
+            <div class="col">
+                  <div class="card bg-primary text-white mb-3">
+                    <div class="card-header"><strong><h5>Estudiante</h5></strong></div>
+                    <div class="card-body bg-light text-dark">
+                      <p class="card-text ">Tienen un descuento</p>
+                      <h5 class="card-title">80%</h5>
+                      <p class="card-subtitle text-muted">* presentar documentación</p>
+                    </div>
+                  </div>
+                </div>
+                  <div class="col">
+                  <div class="card bg-info text-white mb-3">
+                    <div class="card-header"><strong><h5>Trainee</h5></strong></div>
+                    <div class="card-body bg-light text-dark">
+                      <p class="card-text">Tienen un descuento</p>
+                      <h5 class="card-title ">50%</h5>
+                      <p class="card-subtitle text-muted">* presentar documentación</p>
+                    </div>
+                  </div>
+                  </div>
+
+                  <div class="col">
+                  <div class="card bg-warning text-white mb-3">
+                    <div class="card-header"><strong><h5>Junior</h5></strong></div>
+                    <div class="card-body bg-light text-dark">
+                      <p class="card-text">Tienen un descuento</p>
+                      <h5 class="card-title">15%</h5>
+                      <p class="card-subtitle text-muted">* presentar documentación</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <br>
+              <br>
+              <div class="col-md-8 mx-auto">
+              <div class="d-grid gap-2" class="alert alert-light" role="alert" style = "text-align:center;">
+                <h6>VENTA</h6>
+                <h2>VALOR DE TICKET $200</h2>
+              </div>
+            </div>
+
+        <!--Validator-->
+        <div class="col-md-8 mx-auto">
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <input type="text" id="nombre"  class="form-control" placeholder="Nombre" aria-label="Nombre" required>
+            <input type="text" id="apellido" class="form-control" placeholder="Apellido" aria-label="Apellido" required>
+          </div>
+        </div>
+
+        <div class="col-md-8 mx-auto justify-content-center">
+          <label for="exampleFormControlInput1" class="form-label"></label>
+          <input type="email" id="mail" class="form-control" id="exampleFormControlInput1" placeholder="Correo" required>
+        </div>
+        <br>
+        
+        <div class="row row-cols-md-3 justify-content-center">
+
+          <label for="validationDefault05" class="form-label">Cantidad
+          <input type="number" id="cantidadTickets" class="form-control" id="validationDefault05" placeholder="cantidad" min="1" required>
+        </label>
+     
+          <label for="categoriaSelect" class="form-label">Categoría
+          <select class="form-select" aria-label="Categoría" id="categoriaSelect">
+            <option value="" selected>Elige...</option>
+            <option value="0">Sin Categoría</option>
+            <option value="1">Estudiante</option>
+            <option value="2">Trainee</option>
+            <option value="3">Junior</option>
+          </label>
+        </select>
+      </div>
+      <br>
+    
+      <div class="col-md-8 mx-auto justify-content-center"role="alert">
+        <div class="alert alert-primary" id="totalPago" >Total a Pagar: $
+        </div>
+      </div>
+      
+      <!--Buttons-->
+      <div class="row row-cols-md-3 mx-auto justify-content-center">
+        <button id="btnBorrar" type="button" class="btn btn-success" style="margin: 5px;" onclick="reset_total_a_pagar();">Borrar</button>
+        <button id="btnResumen"type="button" class="btn btn-success"  style="margin: 5px;" onclick="total_a_pagar();">Resumen</button>
+      </div>
+      <br>
+      <br>
+      
+      <!-- Footer -->
+      
+      <footer class="footer-basic" style="padding:40px 0; background-color:#096969;">
+        
+        <ul class="list-inline" style="padding:0; list-style:none; text-align:center; font-size:18px;line-height:1.6;
+        margin-bottom:0; color:azure; text-decoration:none; opacity:0.8;">
+
+        <li class="list-inline-item text-wrap" style="padding:0 10px;">Preguntas Frecuentes</li>
+        <li class="list-inline-item" style="padding:0 10px;">Contáctenos</li>
+        <li class="list-inline-item" style="padding:0 10px;">Prensa</li>
+        <li class="list-inline-item" style="padding:0 10px;">Conferencias</li>
+        <li class="list-inline-item" style="padding:0 10px;">Términos y Condiciones</li>
+        <li class="list-inline-item" style="padding:0 10px;">Privacidad</li>
+        <li class="list-inline-item" style="padding:0 10px;">Estudiantes</li>
+      </ul>
+      <br>
+      <p class="copyright" style="text-align:center; color:azure;">Codo a Codo © 2022</p>
+    </footer>
+  </div>
+
+<script src="venta-tickets.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>
